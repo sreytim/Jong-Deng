@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Jong Deng's mission to empower students through global opportunities">
+    <title>About Us - Jong Deng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#216282',
+                        secondary: '#f7a048',
+                        neutral: '#f5f5f5'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header / Navigation -->
+    <header class="bg-primary shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-2">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center">
+                        <img src="./images/logo.png" alt="logo" class="h-12 sm:h-16 w-auto object-contain rounded-full">
+                    </a>
+                </div>
+    
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-4 lg:space-x-8 items-center">
+                    <li><a href="index.html" class="text-white font-semibold hover:text-secondary transition duration-300">Home</a></li>
+                    <li><a href="opportunities.html" class="text-white hover:text-secondary transition duration-300">Opportunities</a></li>
+                    <li><a href="about.html" class="text-white hover:text-secondary transition duration-300">About Us</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-secondary transition duration-300">Contact Us</a></li>
+                    <li><a href="login.html" class="text-white hover:text-secondary transition duration-300">Login</a></li>
+                </ul>
+    
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block text-white font-semibold hover:bg-blue-900 px-4 py-2 rounded transition">Home</a></li>
+                    <li><a href="opportunities.html" class="block text-white hover:bg-blue-900 px-4 py-2 rounded transition">Opportunities</a></li>
+                    <li><a href="about.html" class="block text-white hover:bg-blue-900 px-4 py-2 rounded transition">About Us</a></li>
+                    <li><a href="contact.html" class="block text-white hover:bg-blue-900 px-4 py-2 rounded transition">Contact Us</a></li>
+                    <li><a href="login.html" class="block text-white hover:bg-blue-900 px-4 py-2 rounded transition">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-4">About Jong Deng</h1>
+            <p class="text-lg sm:text-xl">Connecting students with opportunities that transform lives</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-neutral p-6 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center mb-6">
+                        <div class="bg-secondary text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-0 sm:mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-primary">Our Mission</h2>
+                    </div>
+                    <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+                        At Jong Deng, our mission is to democratize access to life-changing opportunities for students and young professionals worldwide. We believe that talent is universal, but opportunity is not. By creating a centralized platform that connects ambitious individuals with scholarships, internships, volunteer programs, exchange opportunities, and workshops, we aim to break down barriers and empower the next generation of global leaders.
+                    </p>
+                </div>
+
+                <div class="bg-neutral p-6 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center mb-6">
+                        <div class="bg-secondary text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-0 sm:mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-primary">Our Vision</h2>
+                    </div>
+                    <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+                        We envision a world where every student, regardless of their background or location, has equal access to opportunities that can transform their future. Through Jong Deng, we strive to create a global community of learners, innovators, and change-makers who are empowered to pursue their dreams and make a positive impact on the world. Our vision is to be the most trusted and comprehensive platform for educational and professional opportunities worldwide.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-12 sm:py-16 bg-neutral">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-primary text-center mb-8 sm:mb-12">Our Core Values</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+                    <div class="bg-secondary text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Accessibility</h3>
+                    <p class="text-gray-600">Making opportunities available to everyone, everywhere, regardless of their circumstances.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+                    <div class="bg-secondary text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Integrity</h3>
+                    <p class="text-gray-600">Maintaining transparency and honesty in all our partnerships and communications.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300 sm:col-span-2 lg:col-span-1">
+                    <div class="bg-secondary text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Excellence</h3>
+                    <p class="text-gray-600">Curating only the highest quality opportunities that truly make a difference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-primary text-center mb-4">Meet Our Team</h2>
+            <p class="text-center text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto px-4">Our dedicated team works tirelessly to connect students with opportunities that can change their lives</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div class="bg-neutral rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-primary to-blue-900 flex items-center justify-center overflow-hidden">
+                        <img src="./images/Sreytim.png" alt="Tak Sreytim" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-primary mb-2">Tak Sreytim</h3>
+                        <p class="text-secondary font-semibold mb-3 text-sm">Information and Communications Technology</p>
+                        <p class="text-gray-600 text-sm">Guiding students through the application process and providing support.</p>
+                    </div>
+                </div>
+
+                <div class="bg-neutral rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-secondary to-primary flex items-center justify-center overflow-hidden">
+                        <img src="./images/Davy.png" alt="Khon Davy" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-primary mb-2">Khon Davy</h3>
+                        <p class="text-secondary font-semibold mb-3 text-sm">Software Development</p>
+                        <p class="text-gray-600 text-sm">Passionate about education equity and global opportunities for all students.</p>
+                    </div>
+                </div>
+
+                <div class="bg-neutral rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-secondary to-primary flex items-center justify-center overflow-hidden">
+                        <img src="./images/Cheata.png" alt="Sim Socheata" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-primary mb-2">Sim Socheata</h3>
+                        <p class="text-secondary font-semibold mb-3 text-sm">Software Development</p>
+                        <p class="text-gray-600 text-sm">Ensuring all opportunities are accurately represented and up to date.</p>
+                    </div>
+                </div>
+
+                <div class="bg-neutral rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-primary to-secondary flex items-center justify-center overflow-hidden">
+                        <img src="./images/Marady.png" alt="Meas Marady" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-primary mb-2">Meas Marady</h3>
+                        <p class="text-secondary font-semibold mb-3 text-sm">Software Development</p>
+                        <p class="text-gray-600 text-sm">Building relationships with organizations worldwide to expand opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 sm:py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Our Impact</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
+                <div>
+                    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">500+</div>
+                    <div class="text-base sm:text-lg lg:text-xl">Opportunities Listed</div>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">10,000+</div>
+                    <div class="text-base sm:text-lg lg:text-xl">Students Helped</div>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">50+</div>
+                    <div class="text-base sm:text-lg lg:text-xl">Countries Reached</div>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">$5M+</div>
+                    <div class="text-base sm:text-lg lg:text-xl">Scholarships Awarded</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Jong Deng</h3>
+                    <p class="text-gray-400">Empowering students through global opportunities and connections.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="opportunities.html" class="text-gray-400 hover:text-white transition">Opportunities</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="text-gray-400 mb-2">Email: info@jongdeng.com</p>
+                    <p class="text-gray-400 mb-4">Phone: +885 (96) 111-111</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Twitter">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 Jong Deng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
