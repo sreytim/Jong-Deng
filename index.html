@@ -18,7 +18,32 @@
                 }
             }
         }
+        
     </script>
+    <style>
+         @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        .carousel-image {
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+        
+        .carousel-image.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .carousel-image.inactive {
+            opacity: 0;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Header / Navigation -->
@@ -65,7 +90,7 @@
     
 
     <!-- Hero Section -->
-    <section class="bg-primary text-white py-12 sm:py-16">
+    <!-- <section class="bg-primary text-white py-12 sm:py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-3xl sm:text-4xl font-bold mb-4">Empowering Students Through Global Opportunities</h1>
             <p class="text-lg sm:text-xl mb-6">Discover scholarships, internships, volunteer programs, and more</p>
@@ -74,10 +99,10 @@
             </a>
         </div>
     </section>
-    
+     -->
 
     <!-- About Preview Section -->
-    <section class="py-12 sm:py-16 bg-white">
+    <!-- <section class="py-12 sm:py-16 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Welcome to Jong Deng</h2>
@@ -86,63 +111,151 @@
                 </p>
             </div>
         </div>
+    </section> -->
+
+    <!-- Hero Section -->
+    <section class="relative h-[70vh] w-full overflow-hidden bg-gray-900">
+        <!-- Image Carousel -->
+        <div class="absolute inset-0">
+            <!-- Image 1 -->
+            <div class="carousel-image active absolute inset-0 bg-cover bg-center" 
+                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80');">
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="carousel-image inactive absolute inset-0 bg-cover bg-center" 
+                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80');">
+            </div>
+            
+            <!-- Image 3 -->
+            <div class="carousel-image inactive absolute inset-0 bg-cover bg-center" 
+                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1920&q=80');">
+            </div>
+            
+            <!-- Image 4 -->
+            <div class="carousel-image inactive absolute inset-0 bg-cover bg-center" 
+                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80');">
+            </div>
+        </div>
+
+        <!-- Overlay Content -->
+        <div class="relative z-10 flex h-full items-center justify-center px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="fade-in text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                    Empowering Youth Through
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-[#216282] to-blue-800">
+                    Global Opportunities
+                    </span>
+                </h1>
+                
+                <p class="fade-in text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 sm:mb-10 max-w-2xl mx-auto px-4">
+                    Connect with thousands of career opportunities, internships, and growth possibilities tailored for your success.
+                </p>
+                
+                <div class="fade-in flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button class="group relative px-8 py-4 bg-primary text-white text-lg font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full sm:w-auto">
+                        <span class="relative z-10">Get Started</span>
+                        <div class="absolute inset-0 bg-[#f7a048] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </button>
+                    
+                    <button class="px-8 py-4 bg-white bg-opacity-10 backdrop-blur-sm text-white text-lg font-semibold rounded-full border-2 border-white border-opacity-30 hover:bg-opacity-20 transition-all duration-300 hover:scale-105 w-full sm:w-auto">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button id="prevBtn" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 bg-white bg-opacity-20 backdrop-blur-sm hover:bg-opacity-30 text-white p-3 sm:p-4 rounded-full transition-all duration-300 hover:scale-110 group">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        
+        <button id="nextBtn" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 bg-white bg-opacity-20 backdrop-blur-sm hover:bg-opacity-30 text-white p-3 sm:p-4 rounded-full transition-all duration-300 hover:scale-110 group">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+
+        <!-- Pagination Dots -->
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+            <button class="dot w-3 h-3 rounded-full bg-white transition-all duration-300 opacity-100 scale-110" data-index="0"></button>
+            <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-40 hover:bg-opacity-60 transition-all duration-300" data-index="1"></button>
+            <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-40 hover:bg-opacity-60 transition-all duration-300" data-index="2"></button>
+            <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-40 hover:bg-opacity-60 transition-all duration-300" data-index="3"></button>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <!-- <div class="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 animate-bounce hidden sm:block">
+            <svg class="w-6 h-6 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div> -->
     </section>
+
 
     <!-- Featured Opportunities -->
     <section class="py-12 sm:py-16 bg-neutral">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl sm:text-3xl font-bold text-primary text-center mb-8 sm:mb-12">Featured Opportunities</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                <!-- Opportunity Card 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="h-48 bg-gradient-to-br from-secondary to-primary"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-primary mb-3">Global Leadership Scholarship</h3>
-                        <p class="text-gray-600 mb-4">Full tuition coverage for undergraduate students demonstrating exceptional leadership potential. Includes mentorship program and networking opportunities.</p>
-                        <a href="opportunities.html" class="inline-block bg-secondary text-white px-6 py-2 rounded hover:bg-primary transition duration-300">Learn More</a>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
+                    <!-- Card 1 -->
+                    <div class="rounded-lg shadow-md hover:shadow-xl transition overflow-hidden bg-primary text-white">
+                        <div class="w-full h-40 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+                        <div class="p-6">
+                            <span class="text-sm font-semibold px-3 py-1 rounded border border-white inline-block mb-4">Volunteer</span>
+                            <h3 class="text-xl font-bold mb-2">Healthcare Volunteer Program</h3>
+                            <p class="text-blue-200 font-medium mb-4">Medical Aid International</p>
+                            <div class="space-y-1 text-sm">
+                                <p><span class="font-semibold">Duration:</span> 3-6 months</p>
+                                <p><span class="font-semibold">Deadline:</span> January 10, 2026</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Opportunity Card 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="h-48 bg-gradient-to-br from-primary to-secondary"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-primary mb-3">Tech Innovation Internship</h3>
-                        <p class="text-gray-600 mb-4">6-month paid internship at leading tech companies. Work on cutting-edge projects and learn from industry experts in software development.</p>
-                        <a href="opportunities.html" class="inline-block bg-secondary text-white px-6 py-2 rounded hover:bg-primary transition duration-300">Learn More</a>
+                    <!-- Card 2 -->
+                    <div class="rounded-lg shadow-md hover:shadow-xl transition overflow-hidden bg-primary text-white">
+                        <div class="w-full h-40 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+                        <div class="p-6">
+                            <span class="text-sm font-semibold px-3 py-1 rounded border border-white inline-block mb-4">Volunteer</span>
+                            <h3 class="text-xl font-bold mb-2">Healthcare Volunteer Program</h3>
+                            <p class="text-blue-200 font-medium mb-4">Medical Aid International</p>
+                            <div class="space-y-1 text-sm">
+                                <p><span class="font-semibold">Duration:</span> 3-6 months</p>
+                                <p><span class="font-semibold">Deadline:</span> January 10, 2026</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Opportunity Card 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="h-48 bg-gradient-to-br from-secondary to-primary"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-primary mb-3">Community Development Volunteer</h3>
-                        <p class="text-gray-600 mb-4">Make a difference in underserved communities. 3-month volunteer program focused on education, healthcare, and sustainable development.</p>
-                        <a href="opportunities.html" class="inline-block bg-secondary text-white px-6 py-2 rounded hover:bg-primary transition duration-300">Learn More</a>
+                    <!-- Card 3 -->
+                    <div class="rounded-lg shadow-md hover:shadow-xl transition overflow-hidden bg-primary text-white">
+                        <div class="w-full h-40 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+                        <div class="p-6">
+                            <span class="text-sm font-semibold px-3 py-1 rounded border border-white inline-block mb-4">Volunteer</span>
+                            <h3 class="text-xl font-bold mb-2">Healthcare Volunteer Program</h3>
+                            <p class="text-blue-200 font-medium mb-4">Medical Aid International</p>
+                            <div class="space-y-1 text-sm">
+                                <p><span class="font-semibold">Duration:</span> 3-6 months</p>
+                                <p><span class="font-semibold">Deadline:</span> January 10, 2026</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Opportunity Card 4 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="h-48 bg-gradient-to-br from-primary to-secondary"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-primary mb-3">International Exchange Program</h3>
-                        <p class="text-gray-600 mb-4">Study abroad for one semester at partner universities worldwide. Immerse yourself in new cultures while earning academic credits.</p>
-                        <a href="opportunities.html" class="inline-block bg-secondary text-white px-6 py-2 rounded hover:bg-primary transition duration-300">Learn More</a>
+                    <!-- Card 4 -->
+                    <div class="rounded-lg shadow-md hover:shadow-xl transition overflow-hidden bg-primary text-white">
+                        <div class="w-full h-40 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+                        <div class="p-6">
+                            <span class="text-sm font-semibold px-3 py-1 rounded border border-white inline-block mb-4">Volunteer</span>
+                            <h3 class="text-xl font-bold mb-2">Youth Leadership Workshop</h3>
+                            <p class="text-blue-200 font-medium mb-4">Future Leaders NGO</p>
+                            <div class="space-y-1 text-sm">
+                                <p><span class="font-semibold">Duration:</span> 1 month</p>
+                                <p><span class="font-semibold">Deadline:</span> December 20, 2025</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Opportunity Card 5 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="h-48 bg-gradient-to-br from-secondary to-primary"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-primary mb-3">Digital Marketing Workshop</h3>
-                        <p class="text-gray-600 mb-4">Intensive 2-week workshop covering SEO, social media marketing, content strategy, and analytics. Certificate upon completion.</p>
-                        <a href="opportunities.html" class="inline-block bg-secondary text-white px-6 py-2 rounded hover:bg-primary transition duration-300">Learn More</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -206,6 +319,101 @@
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+        // Carousel functionality
+        const images = document.querySelectorAll('.carousel-image');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        let currentIndex = 0;
+        let autoplayInterval;
+
+        function showImage(index) {
+            // Remove active class from all images
+            images.forEach((img, i) => {
+                if (i === index) {
+                    img.classList.remove('inactive');
+                    img.classList.add('active');
+                } else {
+                    img.classList.remove('active');
+                    img.classList.add('inactive');
+                }
+            });
+
+            // Update dots
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('opacity-100', 'scale-110');
+                    dot.classList.remove('bg-opacity-40');
+                } else {
+                    dot.classList.remove('opacity-100', 'scale-110');
+                    dot.classList.add('bg-opacity-40');
+                }
+            });
+
+            currentIndex = index;
+        }
+
+        function nextImage() {
+            const next = (currentIndex + 1) % images.length;
+            showImage(next);
+        }
+
+        function prevImage() {
+            const prev = (currentIndex - 1 + images.length) % images.length;
+            showImage(prev);
+        }
+
+        function startAutoplay() {
+            autoplayInterval = setInterval(nextImage, 5000);
+        }
+
+        function stopAutoplay() {
+            clearInterval(autoplayInterval);
+        }
+
+        function resetAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', () => {
+            prevImage();
+            resetAutoplay();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            nextImage();
+            resetAutoplay();
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index'));
+                showImage(index);
+                resetAutoplay();
+            });
+        });
+
+        // Pause autoplay on hover
+        const heroSection = document.querySelector('section');
+        heroSection.addEventListener('mouseenter', stopAutoplay);
+        heroSection.addEventListener('mouseleave', startAutoplay);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevImage();
+                resetAutoplay();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+                resetAutoplay();
+            }
+        });
+
+        // Start autoplay
+        startAutoplay();
     </script>
 </body>
 </html>
